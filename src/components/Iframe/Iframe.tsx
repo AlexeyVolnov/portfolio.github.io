@@ -1,5 +1,5 @@
 import {FC} from "react";
-import style from "../../style/content.module.scss";
+import style from "../../style/Iframe.module.scss";
 
 
 interface IIframeProps {
