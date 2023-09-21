@@ -2,6 +2,7 @@
   background: url("./../images/sidebarBg.jpg") no-repeat 100% /cover;
   width: 100vw;
   height: 100vh;
+
 }
 
 .sidebarInner {
@@ -11,10 +12,12 @@
   gap: 15px;
   padding: 10px;
   position: relative;
+  z-index: 77;
 }
 
 .menu {
   position: absolute;
+  z-index: 99;
   bottom: 40px;
   left: 40px;
   cursor: pointer;
@@ -22,6 +25,7 @@
   height: 100px;
   display: flex;
   justify-content: center;
+  color: #e7e4e4;
   align-items: center;
   background: rgba(0, 0, 0, 0.1);
   border-radius: 7px;
@@ -40,7 +44,6 @@
   width: 100px;
   height: 100px;
   margin: 20px;
-
 }
 
 .wrapper {
@@ -50,7 +53,7 @@
 }
 
 .wrapper, .activeMenu, .menu, .minimize, .sidebar, .sidebarInner {
-  transition: all .3s;
+  transition: all .5s;
 }
 
 .content {
@@ -63,7 +66,6 @@
   padding: 100px 50px;
   background-color: rgba(255, 255, 255, 0.89);
   display: block;
-
 }
 
 

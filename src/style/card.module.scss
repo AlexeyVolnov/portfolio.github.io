@@ -1,0 +1,9 @@
+.card{
+  background: rgba(245, 243, 243, 0.06);
+  transition: all .3s;
+}
+.card:hover{
+  box-shadow: 2px 4px 8px rgba(10, 10, 10, 0.52);
+  z-index: 33;
+  transition: all .3s;
+}

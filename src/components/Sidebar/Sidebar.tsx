@@ -1,5 +1,6 @@
 import {FC, useState} from "react";
 import style from './../../style/sidebar.module.scss'
+import Iframe from "../Iframe/Iframe.tsx";
 import Content from "../Content/Content.tsx";
 
 
@@ -17,10 +18,11 @@ const Sidebar: FC<ISidebarProps> = ({}) => {
        <div className={`${style.sidebar} ${activeMenu?style.minimize:''}`}>
          <div className={`${style.sidebarInner} ${activeMenu?style.activeInner:''}`}>
            <div onClick={menuHandler} className={`${style.menu} ${activeMenu?style.activeMenu:''}`}>меню</div>
+           {!activeMenu && <Content/>}
          </div>
        </div>
        <div className={`${style.content} ${activeMenu?style.activeContent:''}`}>
-         <Content/>
+         <Iframe url={''}/>
        </div>
      </div>
 
