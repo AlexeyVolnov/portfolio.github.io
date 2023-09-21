@@ -1,0 +1,88 @@
+.sidebar {
+  background: url("./../images/sidebarBg.jpg") no-repeat 100% /cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.sidebarInner {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(42, 42, 42, 0.95);
+  gap: 15px;
+  padding: 10px;
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.activeMenu {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.minimize {
+  width: 100px;
+  height: 100px;
+
+}
+
+.wrapper {
+  background: #efefef;
+  height: 100vh;
+  width: 100vw;
+}
+
+.wrapper, .activeMenu, .menu, .minimize, .sidebar, .sidebarInner {
+  transition: all .3s;
+}
+
+.content {
+  display: none;
+}
+
+.activeContent {
+  display: grid;
+  color: black;
+  border-radius: 2px;
+  height: 100%;
+  padding: 100px 50px;
+  background-color: #efefef;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+
+
+}
+
+
+.activeInner {
+
+}
+
+.activeWrapper {
+  background: url("./../images/sidebarBg.jpg") no-repeat 100% /cover;
+  z-index: 3;
+}
+
+.topLine {
+  display: none;
+}
+
+.topLineActive {
+  display: block;
+  z-index: 7;
+  background-color: rgba(0, 0, 0, 0.82);
+}

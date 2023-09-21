@@ -1,0 +1,13 @@
+.active {
+  display: block;
+  background: rgba(63, 63, 64, 0.55);
+  transition: all .1s;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.noActive {
+  display: none;
+  transition: all .1s;
+}
