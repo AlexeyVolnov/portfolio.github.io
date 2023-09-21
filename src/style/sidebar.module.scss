@@ -24,7 +24,8 @@
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  border-radius: 7px;
+  box-shadow: -1px -1px 80px rgba(124, 149, 210, 0.78), 9px 9px 9px rgba(21, 7, 16, 0.78);
 }
 
 .activeMenu {
@@ -32,17 +33,19 @@
   height: 100%;
   top: 0;
   left: 0;
+  text-shadow: -3px -2px 3px rgba(11, 94, 250, 0.79);
 }
 
 .minimize {
   width: 100px;
   height: 100px;
+  margin: 20px;
 
 }
 
 .wrapper {
-  background: #efefef;
-  height: 100vh;
+  background: #ffffff;
+  height: 100%;
   width: 100vw;
 }
 
@@ -55,15 +58,11 @@
 }
 
 .activeContent {
-  display: grid;
   color: black;
-  border-radius: 2px;
   height: 100%;
   padding: 100px 50px;
-  background-color: #efefef;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);
-
+  background-color: rgba(255, 255, 255, 0.89);
+  display: block;
 
 }
 
@@ -73,8 +72,7 @@
 }
 
 .activeWrapper {
-  background: url("./../images/sidebarBg.jpg") no-repeat 100% /cover;
-  z-index: 3;
+
 }
 
 .topLine {
@@ -82,7 +80,5 @@
 }
 
 .topLineActive {
-  display: block;
-  z-index: 7;
-  background-color: rgba(0, 0, 0, 0.82);
+
 }
