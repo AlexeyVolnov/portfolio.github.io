@@ -22,7 +22,7 @@ const Sidebar: FC<ISidebarProps> = ({}) => {
          </div>
        </div>
        <div className={`${style.content} ${activeMenu?style.activeContent:''}`}>
-           <Iframe url={'https://alexeyvolnov.github.io/layout_Outdoor/'}/>
+           <Iframe url={'https://alexeyvolnov.github.io/Outdoor.github.io/'}/>
        </div>
      </div>
 

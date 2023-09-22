@@ -49,12 +49,15 @@
   top: 0;
   left: 0;
   text-shadow: -3px -2px 3px rgba(11, 94, 250, 0.79);
+
 }
 
 .minimize {
   width: 100px;
   height: 100px;
   margin: 20px;
+  position: fixed;
+  z-index: 99;
 }
 
 .wrapper {
@@ -85,7 +88,7 @@
 }
 
 .activeWrapper {
-
+  
 }
 
 .topLine {
