@@ -1,22 +1,38 @@
-import {FC, useState} from "react";
+import {FC} from "react";
 import style from '../../style/card.module.scss'
+import ICardItem from "../../type/ICardItem.ts";
+import {useAppDispatch} from "../../hooks/hooks.ts";
+import {iframeLink} from "../../store/itemsSlice.tsx";
+import githubIcon from "./../../images/cardIcons/iconsGithub.png"
 
 interface ICardProps {
-
+  item: ICardItem
 }
 
 
-const Card: FC<ICardProps> = ({}) => {
-  const [hover,setHover] = useState(false)
-  const cardHandler = ()=>{
-     setHover(prevState => !prevState)
-  }
-  const out = ()=>{
-    setHover(prevState => !prevState)
-  }
+const Card: FC<ICardProps> = ({item}) => {
+
+  const Dispatch = useAppDispatch()
+
+  const iframeHandler = () => Dispatch(iframeLink(item.githubLink))
+
+
   return (
-     <div onMouseEnter={cardHandler}  onMouseOut={out} className={style.card}>
-       {hover && <div>dfdfdf</div>}
+     <div className={style.card}>
+
+       <img className={style.cardBG} src={item.url} alt=""/>
+
+       <div className={style.cardContent}>
+         <h5 className={'text-2xl my-5 text-cyan-100'}>{item.title}</h5>
+         <div>
+           {item.text}
+         </div>
+         <a className={'flex gap-3 mt-10 items-center'} target={'_blank'} href={item.githubLink}>
+           <img className={'w-[40px]'} src={githubIcon} alt=""/>
+           <p className={'text-cyan-100 text-[1.1rem]'}>Посмотреть код на GitHub : <p className={'text-cyan-50 text-[1rem]'} >{item.githubLink}</p></p>
+         </a>
+         <button onClick={iframeHandler} className={style.buttonPrewiew}>Посмотреть проект</button>
+       </div>
      </div>
   )
 }

@@ -1,6 +1,7 @@
 import {FC} from "react";
 import style from './../../style/content.module.scss'
 import Card from "../Card/Card.tsx";
+import {useAppSelector} from "../../hooks/hooks.ts";
 
 interface IContentProps {
 
@@ -9,16 +10,12 @@ interface IContentProps {
 
 const Content: FC<IContentProps> = ({}) => {
 
-  const cards = [{}]
+const cards = useAppSelector(state=>state.itemsSlice.items)
 
 
   return (
      <div className={style.content}>
-       <Card/>
-       <Card/>
-       <Card/>
-       <Card/>
-       <Card/>
+       {cards.map(card=><Card key={card.id} item={card}/>)}
      </div>
   )
 }

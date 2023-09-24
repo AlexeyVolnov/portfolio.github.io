@@ -1,7 +1,9 @@
-import {FC, useState} from "react";
+import {FC, useEffect, useState} from "react";
 import style from './../../style/sidebar.module.scss'
 import Iframe from "../Iframe/Iframe.tsx";
 import Content from "../Content/Content.tsx";
+import {useAppSelector} from "../../hooks/hooks.ts";
+import AboutMy from "../AboutMy.tsx";
 
 
 interface ISidebarProps {
@@ -10,6 +12,10 @@ interface ISidebarProps {
 
 
 const Sidebar: FC<ISidebarProps> = ({}) => {
+  const iframeLink = useAppSelector(state=>state.itemsSlice.activeIframe)
+  useEffect(()=>{
+    menuHandler()
+  },[iframeLink])
   const [activeMenu, setActiveMenu] = useState(false)
   const menuHandler = () => setActiveMenu(prevState => !prevState)
   return (
@@ -22,7 +28,7 @@ const Sidebar: FC<ISidebarProps> = ({}) => {
          </div>
        </div>
        <div className={`${style.content} ${activeMenu?style.activeContent:''}`}>
-           <Iframe url={'https://alexeyvolnov.github.io/Outdoor.github.io/'}/>
+        <Iframe url={iframeLink}/>
        </div>
      </div>
 
