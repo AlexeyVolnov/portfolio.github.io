@@ -9,9 +9,7 @@ url:string
 
 const Iframe: FC<IIframeProps> = ({url}) => {
   return (
-     <div>
        <iframe className={style.iframe} src={url}></iframe>
-     </div>
   )
 }
 

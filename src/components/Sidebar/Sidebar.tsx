@@ -3,7 +3,7 @@ import style from './../../style/sidebar.module.scss'
 import Iframe from "../Iframe/Iframe.tsx";
 import Content from "../Content/Content.tsx";
 import {useAppSelector} from "../../hooks/hooks.ts";
-import AboutMy from "../AboutMy.tsx";
+
 
 
 interface ISidebarProps {

@@ -21,7 +21,7 @@ const items:ICardItem[] = [
     githubLink:"https://alexeyvolnov.github.io/countries.github.io/"
   },
   {
-    id:1,
+    id:3,
     url: "/Outdoor.jpg",
     title: "О проекте",
     text: "45454",
