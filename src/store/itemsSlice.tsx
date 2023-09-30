@@ -22,10 +22,17 @@ const items:ICardItem[] = [
   },
   {
     id:3,
-    url: "/Outdoor.jpg",
+    url: "/Gazprom.jpg",
     title: "О проекте",
     text: "45454",
-    githubLink:"https://alexeyvolnov.github.io/Outdoor.github.io/"
+    githubLink:"https://oblgaz56.ru/"
+  },
+  {
+    id:4,
+    url: "/oblgaz_magazin.jpg",
+    title: "О проекте",
+    text: "45454",
+    githubLink:"https://gss56.ru/about/contacts/"
   },
 
 ]
